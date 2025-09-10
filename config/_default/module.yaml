@@ -1,0 +1,15 @@
+############################
+## HUGO MODULES
+## Simplified configuration without external module imports
+############################
+
+# Mount theme files directly
+mounts:
+  - source: themes/hugo-blox-builder/layouts
+    target: layouts
+  - source: themes/hugo-blox-builder/assets
+    target: assets
+  - source: layouts
+    target: layouts
+  - source: assets
+    target: assets

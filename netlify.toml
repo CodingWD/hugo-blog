@@ -1,0 +1,32 @@
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.121.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.production.environment]
+  HUGO_VERSION = "0.121.0"
+  HUGO_ENV = "production"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.121.0"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.121.0"
+
+# 重定向规则
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# 头部设置
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "frame-ancestors 'self'"
