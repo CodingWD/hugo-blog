@@ -1,7 +1,7 @@
 # 将 baseURL 替换成您未来的网站地址
 # 格式为: https://<用户名>.github.io/<仓库名>/
 # 如果您的仓库名就是 <用户名>.github.io，则 baseURL 就是 https://<用户名>.github.io/
-baseURL = "https://CodingWD.github.io/hugo-blog/"
+baseURL = "http://blog.yxipc.com/"
 languageCode = "zh-cn" # 设置语言为中文
 title = "我的个人博客"
 theme = "PaperMod"
